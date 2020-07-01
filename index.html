@@ -1,128 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Asrkari Satyagraha</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script src="https://code.angularjs.org/1.8.0/angular.min.js"></script>
-  <script src="https://code.angularjs.org/1.8.0/angular-sanitize.js"></script>
-   
-  <style>
-    .container-fluid { padding-top: 70px; }
 
+<head>
+	<title>Asrkari Satyagraha</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://code.angularjs.org/1.8.0/angular.min.js"></script>
+	<script src="https://code.angularjs.org/1.8.0/angular-sanitize.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<style>
+		
+		
     .noPadding {
       padding: 0px 20px;
     }
-    
-  </style>
-  <script>
-    $(document).ready(function(){
-      $(".navbar-nav a").click(function(){
-        //console.log("A");
-          $(this).tab('show');
-      });
-    });
-    var app = angular.module('myApp', ["ngSanitize"]);
-    app.controller('myCtrl', function($scope) {
-      $scope.textContent = {
-        English : {
-          Title: "Asrkari Satyagraha",
-          
-          Home :{
-            Lable : "Home",
-            htmlContent : "<h2>Asrkari Satyagraha</h2><p><strong>Asrkari Satyagraha</strong> is a<em> non-violent movement for sustainable and non-violent economy in line with Gandhian principles &amp; philosophy in post Corona World which will witness increase in extreme poverty, growing gender inequality and rise in violation of human rights.</em></p>  <p></p><h5><strong>Vidharbha Satyagraha</strong></h5><h6>Satyagraha in Vidarbha to find solutions of agrarian/farmer’s crisis situation that leads farmers to take extreme steps as suicide.&nbsp;</h6><p>Vidarbha, The Suicide Epidemic of India: Vidarbha Peace Project focuses on one of the regions in central India called Vidarbha famously known as farmer suicide epidemic of India. Peace Foundation started its pilot project in village Dhanoli (District Wardha) with an aim to develop local and sustainable economy solutions to improve economic situations of farmers.</p><p>Background of issue: Over past 20 years, due to serious distress in agriculture &amp; rural India emerging from Environmental and Economic reasons, more than 300,000 farmers have committed suicide throughout India. Maharashtra has highest number of suicide by distressed farmers in India. From 2012 to April this year, a total of 3,145 farmers committed suicide in Vidarbha region. A recent analysis reveals just how deep despair runs in Vidarbha. In many cases, even a loan as small as INR 10,000 was enough to push farmers over the edge to commit suicide.</p><p>Aim of Project: Developing a local unit to produce fabric from cotton at village level with an aim to improve value chain, connecting Dhanoli farmer’s directly to market, reducing economic inequality between landless labour and farmers with land, addressing social inequalities by ensuring fair opportunities to women and socially underprivileged groups,&nbsp; and bring maximum benefits to farmers and labours involved in economic activities.</p>",
-          },
-          About :{
-            Lable : "About",
-            htmlContent : "<h2>Asrkari Satyagraha</h2><p><em><em>A non-violent movement for a sustainable and non-violent economy in line with Gandhian principles and philosophy. It aims to mitigate the adverse effects of the coronavirus pandemic which potentially leads to an increase in extreme poverty, a growing gender inequality and a rise in violation of human rights.</em></em></p><p><strong>ASRKARI</strong><br><em>A-srkāri</em> and <em>Asr-kāri</em> – the name can be pronounced in two different ways. Each way is a combination of two words with different meanings. The word <em>A-srkari</em> means non-governmental, i.e. community driven, and <em>Asr-kari</em> means effective.</p><p><strong>SATYAGRAHA</strong><br><em>Satyagraha</em> is a composition of two words from Sanskrit, <em>satya</em> (truth) and <em>āgraha</em> (insistence), and translates to “holding onto truth”. It is a particular form of non-violent resistance or civil resistance which advocates resisting non-violently over using violence. Resisting non-violently is considered the summit of bravery. The term was coined and developed by Mahatma Gandhi. He deployed satyagraha in the Indian independence movement and also during his earlier struggles in South Africa for Indian rights<em>.</em></p>",
-          },
-          Contact :{
-            Lable : "Contact",
-            htmlContent : "<strong>Asrkari Satyagraha</strong> is a<em> non-violent movement for sustainable and non-violent economy in line with Gandhian principles &amp; philosophy in post Corona World which will witness increase in extreme poverty, growing gender inequality and rise in violation of human rights.</em></p>  <p></p><h5><strong>Vidharbha Satyagraha</strong></h5><h6>Satyagraha in Vidarbha to find solutions of agrarian/farmer’s crisis situation that leads farmers to take extreme steps as suicide.&nbsp;</h6><p>Vidarbha, The Suicide Epidemic of India: Vidarbha Peace Project focuses on one of the regions in central India called Vidarbha famously known as farmer suicide epidemic of India. Peace Foundation started its pilot project in village Dhanoli (District Wardha) with an aim to develop local and sustainable economy solutions to improve economic situations of farmers.</p><p>Background of issue: Over past 20 years, due to serious distress in agriculture &amp; rural India emerging from Environmental and Economic reasons, more than 300,000 farmers have committed suicide throughout India. Maharashtra has highest number of suicide by distressed farmers in India. From 2012 to April this year, a total of 3,145 farmers committed suicide in Vidarbha region. A recent analysis reveals just how deep despair runs in Vidarbha. In many cases, even a loan as small as INR 10,000 was enough to push farmers over the edge to commit suicide.</p><p>Aim of Project: Developing a local unit to produce fabric from cotton at village level with an aim to improve value chain, connecting Dhanoli farmer’s directly to market, reducing economic inequality between landless labour and farmers with land, addressing social inequalities by ensuring fair opportunities to women and socially underprivileged groups,&nbsp; and bring maximum benefits to farmers and labours involved in economic activities.</p>",
-          }
-        },
-        Hindi : {
-          Title: "असरकारी सत्याग्रह",
-          
-          Home :{
-            Lable : "होम",
-            htmlContent : "<h2>असरकारी सत्याग्रह</h2><p><strong>असरकारी सत्याग्रह</strong> <p><em>गांधीवादी दर्शन के अनुरूप एक सतत और अहिंसक अर्थव्यवस्था के लिए एक आंदोलन</em></p>  <p>असरकारी सत्याग्रह, कोरोना वर्ल्ड में गांधीवादी सिद्धांतों और दर्शन के अनुरूप टिकाऊ और अहिंसक अर्थव्यवस्था के लिए एक अहिंसक आंदोलन है जो अत्यधिक गरीबी में वृद्धि, लिंग असमानता में वृद्धि और मानव अधिकारों के उल्लंघन में वृद्धि का गवाह बनेगा।</p><h5><strong>विदर्भ सत्याग्रह</strong></h5><h6>कृषि / किसान की संकट की स्थिति का समाधान खोजने के लिए विदर्भ में सत्याग्रह जो किसानों को आत्महत्या के रूप में चरम कदम उठाने के लिए प्रेरित करता है।</h6><p>विदर्भ, भारत का आत्मघाती महामारी: विदर्भ शांति परियोजना मध्य भारत के उन क्षेत्रों में से एक पर केंद्रित है, जिसे विदर्भ में भारत के किसान आत्मघाती महामारी के रूप में जाना जाता है। पीस फाउंडेशन ने किसानों की आर्थिक स्थितियों में सुधार के लिए स्थानीय और स्थायी अर्थव्यवस्था समाधान विकसित करने के उद्देश्य से गांव धनोली (जिला वर्धा) में अपनी पायलट परियोजना शुरू की। मुद्दे की पृष्ठभूमि: पिछले 20 वर्षों में, पर्यावरण और आर्थिक कारणों से उभर रहे कृषि और ग्रामीण भारत में गंभीर संकट के कारण, पूरे भारत में 300,000 से अधिक किसानों ने आत्महत्या की है। भारत में सबसे ज्यादा पीड़ित किसानों की आत्महत्या से महाराष्ट्र में है। इस वर्ष 2012 से अप्रैल तक, विदर्भ क्षेत्र में कुल 3,145 किसानों ने आत्महत्या की। हाल ही के एक विश्लेषण से पता चलता है कि विदर्भ में कितनी गहरी निराशा है। कई मामलों में, INR 10,000 जितना छोटा ऋण भी किसानों को आत्महत्या करने के लिए किनारे पर धकेलने के लिए पर्याप्त था। परियोजना का उद्देश्य: मूल्य श्रृंखला में सुधार के लिए ग्राम स्तर पर कपास से कपड़े का उत्पादन करने के लिए एक स्थानीय इकाई का विकास करना, धनोली किसान को सीधे बाजार से जोड़ना, भूमिहीन श्रम और भूमि वाले किसानों के बीच आर्थिक असमानता को कम करना, उचित अवसरों को सुनिश्चित करने के लिए सामाजिक असमानताओं को संबोधित करना। महिलाओं और सामाजिक रूप से वंचित समूहों, और आर्थिक गतिविधियों में शामिल किसानों और मजदूरों के लिए अधिकतम लाभ लाते हैं।</p>",
-          },
-          About :{
-            Lable : "बारे में",
-            htmlContent : "<strong>असरकारी सत्याग्रह</strong> <p><em>गांधीवादी दर्शन के अनुरूप एक सतत और अहिंसक अर्थव्यवस्था के लिए एक आंदोलन</em></p>  <p>असरकारी सत्याग्रह, कोरोना वर्ल्ड में गांधीवादी सिद्धांतों और दर्शन के अनुरूप टिकाऊ और अहिंसक अर्थव्यवस्था के लिए एक अहिंसक आंदोलन है जो अत्यधिक गरीबी में वृद्धि, लिंग असमानता में वृद्धि और मानव अधिकारों के उल्लंघन में वृद्धि का गवाह बनेगा।</p><h5><strong>विदर्भ सत्याग्रह</strong></h5><h6>कृषि / किसान की संकट की स्थिति का समाधान खोजने के लिए विदर्भ में सत्याग्रह जो किसानों को आत्महत्या के रूप में चरम कदम उठाने के लिए प्रेरित करता है।</h6><p>विदर्भ, भारत का आत्मघाती महामारी: विदर्भ शांति परियोजना मध्य भारत के उन क्षेत्रों में से एक पर केंद्रित है, जिसे विदर्भ में भारत के किसान आत्मघाती महामारी के रूप में जाना जाता है। पीस फाउंडेशन ने किसानों की आर्थिक स्थितियों में सुधार के लिए स्थानीय और स्थायी अर्थव्यवस्था समाधान विकसित करने के उद्देश्य से गांव धनोली (जिला वर्धा) में अपनी पायलट परियोजना शुरू की। मुद्दे की पृष्ठभूमि: पिछले 20 वर्षों में, पर्यावरण और आर्थिक कारणों से उभर रहे कृषि और ग्रामीण भारत में गंभीर संकट के कारण, पूरे भारत में 300,000 से अधिक किसानों ने आत्महत्या की है। भारत में सबसे ज्यादा पीड़ित किसानों की आत्महत्या से महाराष्ट्र में है। इस वर्ष 2012 से अप्रैल तक, विदर्भ क्षेत्र में कुल 3,145 किसानों ने आत्महत्या की। हाल ही के एक विश्लेषण से पता चलता है कि विदर्भ में कितनी गहरी निराशा है। कई मामलों में, INR 10,000 जितना छोटा ऋण भी किसानों को आत्महत्या करने के लिए किनारे पर धकेलने के लिए पर्याप्त था। परियोजना का उद्देश्य: मूल्य श्रृंखला में सुधार के लिए ग्राम स्तर पर कपास से कपड़े का उत्पादन करने के लिए एक स्थानीय इकाई का विकास करना, धनोली किसान को सीधे बाजार से जोड़ना, भूमिहीन श्रम और भूमि वाले किसानों के बीच आर्थिक असमानता को कम करना, उचित अवसरों को सुनिश्चित करने के लिए सामाजिक असमानताओं को संबोधित करना। महिलाओं और सामाजिक रूप से वंचित समूहों, और आर्थिक गतिविधियों में शामिल किसानों और मजदूरों के लिए अधिकतम लाभ लाते हैं।</p>",
-          },
-          Contact :{
-            Lable : "सम्पर्क करें",
-            htmlContent : "<strong>असरकारी सत्याग्रह</strong> <p><em>गांधीवादी दर्शन के अनुरूप एक सतत और अहिंसक अर्थव्यवस्था के लिए एक आंदोलन</em></p>  <p>असरकारी सत्याग्रह, कोरोना वर्ल्ड में गांधीवादी सिद्धांतों और दर्शन के अनुरूप टिकाऊ और अहिंसक अर्थव्यवस्था के लिए एक अहिंसक आंदोलन है जो अत्यधिक गरीबी में वृद्धि, लिंग असमानता में वृद्धि और मानव अधिकारों के उल्लंघन में वृद्धि का गवाह बनेगा।</p><h5><strong>विदर्भ सत्याग्रह</strong></h5><h6>कृषि / किसान की संकट की स्थिति का समाधान खोजने के लिए विदर्भ में सत्याग्रह जो किसानों को आत्महत्या के रूप में चरम कदम उठाने के लिए प्रेरित करता है।</h6><p>विदर्भ, भारत का आत्मघाती महामारी: विदर्भ शांति परियोजना मध्य भारत के उन क्षेत्रों में से एक पर केंद्रित है, जिसे विदर्भ में भारत के किसान आत्मघाती महामारी के रूप में जाना जाता है। पीस फाउंडेशन ने किसानों की आर्थिक स्थितियों में सुधार के लिए स्थानीय और स्थायी अर्थव्यवस्था समाधान विकसित करने के उद्देश्य से गांव धनोली (जिला वर्धा) में अपनी पायलट परियोजना शुरू की। मुद्दे की पृष्ठभूमि: पिछले 20 वर्षों में, पर्यावरण और आर्थिक कारणों से उभर रहे कृषि और ग्रामीण भारत में गंभीर संकट के कारण, पूरे भारत में 300,000 से अधिक किसानों ने आत्महत्या की है। भारत में सबसे ज्यादा पीड़ित किसानों की आत्महत्या से महाराष्ट्र में है। इस वर्ष 2012 से अप्रैल तक, विदर्भ क्षेत्र में कुल 3,145 किसानों ने आत्महत्या की। हाल ही के एक विश्लेषण से पता चलता है कि विदर्भ में कितनी गहरी निराशा है। कई मामलों में, INR 10,000 जितना छोटा ऋण भी किसानों को आत्महत्या करने के लिए किनारे पर धकेलने के लिए पर्याप्त था। परियोजना का उद्देश्य: मूल्य श्रृंखला में सुधार के लिए ग्राम स्तर पर कपास से कपड़े का उत्पादन करने के लिए एक स्थानीय इकाई का विकास करना, धनोली किसान को सीधे बाजार से जोड़ना, भूमिहीन श्रम और भूमि वाले किसानों के बीच आर्थिक असमानता को कम करना, उचित अवसरों को सुनिश्चित करने के लिए सामाजिक असमानताओं को संबोधित करना। महिलाओं और सामाजिक रूप से वंचित समूहों, और आर्थिक गतिविधियों में शामिल किसानों और मजदूरों के लिए अधिकतम लाभ लाते हैं।</p>",
-          }
-        },
-        /*Marathi : {
-          Title : "Marathi"
-        }*/
-      };
-      $scope.myLanguage = $scope.textContent.English;
-      $scope.changeLanguage = function(lang) {
-          $scope.myLanguage = $scope.textContent[lang];
-      }
-    });
-    
-  </script>
+    .noPaddinghw {
+      padding: 0px 0px;
+    }
+	</style>
+	<script>
+		var app = angular.module('myApp', ["ngSanitize"]);
+		    app.controller('myCtrl', function($scope, $http) {
+		      
+		      $scope.textContent = {
+		        English : {
+		          Title: "Asrkari Satyagraha",
+		          
+		          Home :{
+		            Lable : "Home",
+		          },
+		          About :{
+		            Lable : "About",
+		          },
+		          Contact :{
+		            Lable : "Contact",
+		          }
+		        },
+		        Hindi : {
+		          Title: "असरकारी सत्याग्रह",
+		          
+		          Home :{
+		            Lable : "होम",
+		          },
+		          About :{
+		            Lable : "बारे में",
+		          },
+		          Contact :{
+		            Lable : "सम्पर्क करें",
+		          }
+		        },
+		        /*Marathi : {
+		          Title : "Marathi"
+		        }*/
+		      };
+		      
+		      $scope.changeLanguage = function(lang) {
+		        $scope.myLanguage = $scope.textContent[lang];
+		          $http.get(lang +"/Home.html").then(function(response) {
+		            $scope.myLanguage.Home.htmlContent = response.data;
+		          });
+		          $http.get(lang +"/About.html").then(function(response) {
+		            $scope.myLanguage.About.htmlContent = response.data;
+		          });
+		          $http.get(lang +"/Contact.html").then(function(response) {
+		            $scope.myLanguage.Contact.htmlContent = response.data;
+		          });
+		          
+		      }
+		      $scope.changeLanguage("English");
+		    });
+		    $(document).ready(function(){
+		      $(".navbar-nav a").click(function(){
+		        //console.log("A");
+		          $(this).tab('show');
+		      });
+		    });
+	</script>
 </head>
+
 <body id="page" ng-app="myApp" ng-controller="myCtrl">
-  
-    
-
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid noPadding">
-    <div class="navbar-header">
-      
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">{{myLanguage.Title}}</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a data-toggle="collapse" data-target=".in" href="#Home">{{myLanguage.Home.Lable}}</a></li>
-        
-        <li><a data-toggle="collapse" data-target=".in" href="#About">{{myLanguage.About.Lable}}</a></li>
-        <li><a data-toggle="collapse" data-target=".in" href="#Contact">{{myLanguage.Contact.Lable}}</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown">Language<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a data-toggle="collapse" data-target=".in" ng-click="changeLanguage('English')">English</a></li>
-            <li><a data-toggle="collapse" data-target=".in" ng-click="changeLanguage('Hindi')">Hindi</a></li>
-            <!--<li><a data-toggle="collapse" data-target=".in" ng-click="changeLanguage('Marathi')">Marathi</a></li>-->
-          </ul>
-        </li>
-      </ul>
-    </div>
-    
-  </div>
-</nav>
-
-<div class="container-fluid" id="Home">
-  <div ng-bind-html="myLanguage.Home.htmlContent"></div>
-  
-  
-  
-</div>
-<div class="container-fluid" id="About">
-  <div ng-bind-html="myLanguage.About.htmlContent"></div>
-</div>
-<div class="container-fluid" id="Contact">
-  <h3>Contact</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
-
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid noPadding">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span> 
+				</button> <a class="navbar-brand" href="#">{{myLanguage.Title}}</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a data-toggle="collapse" data-target=".in" href="#Home">{{myLanguage.Home.Lable}}</a>
+					</li>
+					<li><a data-toggle="collapse" data-target=".in" href="#About">{{myLanguage.About.Lable}}</a>
+					</li>
+					<li><a data-toggle="collapse" data-target=".in" href="#Contact">{{myLanguage.Contact.Lable}}</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown">Language<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a data-toggle="collapse" data-target=".in" ng-click="changeLanguage('English')">English</a>
+							</li>
+							<li><a data-toggle="collapse" data-target=".in" ng-click="changeLanguage('Hindi')">हिंदी</a>
+							</li>
+							<!--<li><a data-toggle="collapse" data-target=".in" ng-click="changeLanguage('Marathi')">Marathi</a></li>-->
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container-fluid noPaddinghw" id="mainPageImage">
+    <img class="hidden-xs hidden-sm noPaddinghw" src="./img/title-bg-img.png" width="100%"  alt="Asrkari Satyagraha">
+    <img class="visible-xs visible-sm noPaddinghw" src="./img/title-bg-img-phone.png" width="100%"  alt="Asrkari Satyagraha">
+	</div>
+	<div class="container-fluid" id="Home">
+		<div ng-bind-html="myLanguage.Home.htmlContent"></div>
+	</div>
+	<div class="container-fluid" id="About">
+		<div ng-bind-html="myLanguage.About.htmlContent"></div>
+	</div>
+	<div class="container-fluid" id="Contact">
+		<div ng-bind-html="myLanguage.Contact.htmlContent"></div>
+	</div>
 </body>
 </html>
