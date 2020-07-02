@@ -14,6 +14,9 @@ angular.module('myApp', ["ngSanitize"])
                 },
                 OurWork :{
                     Lable : "Our Work",
+                    Title1: "Shifting focus from profit to peace and from wealth to wellbeing",
+                    Title2: "COMPANION ORGANIZATIONS",
+                    Title3: "REGULAR INDIVIDUAL CONTRIBUTORS",
                 },
                 Contact :{
                     Lable : "Contact",
@@ -31,6 +34,9 @@ angular.module('myApp', ["ngSanitize"])
                 },
                 OurWork :{
                     Lable : "हमारा काम",
+                    Title1: "लाभ से शांति और धन से भलाई तक ध्यान केंद्रित करना",
+                    Title2: "साथी संगठन",
+                    Title3: "नियमित एकल सहायक",
                 },
                 Contact :{
                 Lable : "सम्पर्क करें",
@@ -47,6 +53,10 @@ angular.module('myApp', ["ngSanitize"])
                 },
                 OurWork :{
                     Lable : "Unsere Arbeit",
+                    Title1 : "Verlagerung des Fokus von Profit zu Frieden und von Wohlstand zu Wohlbefinden",
+                    Title2: "BEGLEIT ORGANISATIONEN",
+                    Title3: "REGELMÄSSIGE INDIVIDUELLE BEITRÄGE",
+
                 },
                 Contact :{
                     Lable : "Kontakt",
@@ -64,9 +74,6 @@ angular.module('myApp', ["ngSanitize"])
             });
             $http.get(lang +"/Contact.html").then(function(response) {
                 $scope.myLanguage.Contact.htmlContent = response.data;
-            });
-            $http.get(lang +"/OurWork.html").then(function(response) {
-                $scope.myLanguage.OurWork.htmlContent = response.data;
             });
         }
         $scope.changeLanguage("Deutsche");
