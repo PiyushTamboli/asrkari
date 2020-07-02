@@ -6,83 +6,39 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 	<script src="https://code.angularjs.org/1.8.0/angular.min.js"></script>
 	<script src="https://code.angularjs.org/1.8.0/angular-sanitize.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="script/main.js"></script>
 	<style>
 		
-		
+	body {
+		font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif ;
+	}	
     .noPadding {
-      padding: 0px 20px;
-    }
-    .noPaddinghw {
       padding: 0px 0px;
     }
+	
+	.firstCharacter::first-letter {
+		font-size: 3em;
+		font-family: cursive;
+		margin: 0 .1em 0 0;
+	}
 	</style>
 	<script>
-		var app = angular.module('myApp', ["ngSanitize"]);
-		    app.controller('myCtrl', function($scope, $http) {
-		      
-		      $scope.textContent = {
-		        English : {
-		          Title: "Asrkari Satyagraha",
-		          
-		          Home :{
-		            Lable : "Home",
-		          },
-		          About :{
-		            Lable : "About",
-		          },
-		          Contact :{
-		            Lable : "Contact",
-		          }
-		        },
-		        Hindi : {
-		          Title: "असरकारी सत्याग्रह",
-		          
-		          Home :{
-		            Lable : "होम",
-		          },
-		          About :{
-		            Lable : "बारे में",
-		          },
-		          Contact :{
-		            Lable : "सम्पर्क करें",
-		          }
-		        },
-		        /*Marathi : {
-		          Title : "Marathi"
-		        }*/
-		      };
-		      
-		      $scope.changeLanguage = function(lang) {
-		        $scope.myLanguage = $scope.textContent[lang];
-		          $http.get(lang +"/Home.html").then(function(response) {
-		            $scope.myLanguage.Home.htmlContent = response.data;
-		          });
-		          $http.get(lang +"/About.html").then(function(response) {
-		            $scope.myLanguage.About.htmlContent = response.data;
-		          });
-		          $http.get(lang +"/Contact.html").then(function(response) {
-		            $scope.myLanguage.Contact.htmlContent = response.data;
-		          });
-		          
-		      }
-		      $scope.changeLanguage("English");
-		    });
-		    $(document).ready(function(){
-		      $(".navbar-nav a").click(function(){
-		        //console.log("A");
-		          $(this).tab('show');
-		      });
-		    });
+		$(document).ready(function(){
+			$(".navbar-nav a").click(function(){
+				$(this).tab('show');
+			});
+		});
 	</script>
 </head>
 
 <body id="page" ng-app="myApp" ng-controller="myCtrl">
 	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container-fluid noPadding">
+		<div class="container-fluid noPadding" style="padding: 0px 20px">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -93,28 +49,25 @@
 				<ul class="nav navbar-nav">
 					<li class="active"><a data-toggle="collapse" data-target=".in" href="#Home">{{myLanguage.Home.Lable}}</a>
 					</li>
-					<li><a data-toggle="collapse" data-target=".in" href="#About">{{myLanguage.About.Lable}}</a>
-					</li>
-					<li><a data-toggle="collapse" data-target=".in" href="#Contact">{{myLanguage.Contact.Lable}}</a>
-					</li>
+					<li><a data-toggle="collapse" data-target=".in" href="#About">{{myLanguage.About.Lable}}</a></li>
+					<li><a data-toggle="collapse" data-target=".in" href="#OurWork">{{myLanguage.OurWork.Lable}}</a></li>
+					<li><a data-toggle="collapse" data-target=".in" href="#Contact">{{myLanguage.Contact.Lable}}</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown">Language<span class="caret"></span></a>
+					<li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown">{{myLanguage.Language}}<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a data-toggle="collapse" data-target=".in" ng-click="changeLanguage('English')">English</a>
-							</li>
-							<li><a data-toggle="collapse" data-target=".in" ng-click="changeLanguage('Hindi')">हिंदी</a>
-							</li>
-							<!--<li><a data-toggle="collapse" data-target=".in" ng-click="changeLanguage('Marathi')">Marathi</a></li>-->
+							<li><a data-toggle="collapse" data-target=".in" ng-click="changeLanguage('English')">English</a></li>
+							<li><a data-toggle="collapse" data-target=".in" ng-click="changeLanguage('Hindi')">हिंदी</a></li>
+							<li><a data-toggle="collapse" data-target=".in" ng-click="changeLanguage('Deutsche')">Deutsche</a></li>
 						</ul>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</nav>
-	<div class="container-fluid noPaddinghw" id="mainPageImage">
-    <img class="hidden-xs hidden-sm noPaddinghw" src="./img/title-bg-img.png" width="100%"  alt="Asrkari Satyagraha">
-    <img class="visible-xs visible-sm noPaddinghw" src="./img/title-bg-img-phone.png" width="100%"  alt="Asrkari Satyagraha">
+	<div class="container-fluid noPadding" id="mainPageImage">
+    <img class="hidden-xs hidden-sm noPadding" src="./img/title-bg-img.png" width="100%"  alt="Asrkari Satyagraha">
+    <img class="visible-xs visible-sm noPadding" src="./img/title-bg-img-phone.png" width="100%"  alt="Asrkari Satyagraha">
 	</div>
 	<div class="container-fluid" id="Home">
 		<div ng-bind-html="myLanguage.Home.htmlContent"></div>
@@ -122,8 +75,27 @@
 	<div class="container-fluid" id="About">
 		<div ng-bind-html="myLanguage.About.htmlContent"></div>
 	</div>
+	<br>
+	<hr>
+	<br>
+	<div class="container-fluid" id="OurWork" style="text-align: center;">
+		<div ng-bind-html="myLanguage.OurWork.htmlContent"></div>
+	</div>
 	<div class="container-fluid" id="Contact">
 		<div ng-bind-html="myLanguage.Contact.htmlContent"></div>
 	</div>
+	
+	<!-- Footer -->
+	<div id="footer" style="color: white; text-align: center;" class="container-fluid noPadding">
+		<div class="navbar navbar-inverse" style="margin-bottom: 0px;">
+			<a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+			<a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+			<a class="btn btn-social-icon" href="mailto:amit@peace-is-the-path.org"><i class="fa fa-envelope-o"></i></a>
+			<div class="copyright" style="margin-bottom: 5px;">
+				Website Content © All Right Reserved | Peace Foundation e.V. 2016
+			</div>
+		</div>
+	</div>
+	
 </body>
 </html>
