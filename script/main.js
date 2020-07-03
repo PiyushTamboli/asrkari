@@ -12,6 +12,12 @@ angular.module('myApp', ["ngSanitize"])
                 About :{
                     Lable : "About",
                 },
+                Origin :{
+                    Lable : "Origin",
+                },
+                Vision :{
+                    Lable : "Vision",
+                },
                 OurWork :{
                     Lable : "Our Work",
                     Title1: "Shifting focus from profit to peace and from wealth to wellbeing",
@@ -32,6 +38,12 @@ angular.module('myApp', ["ngSanitize"])
                 About :{
                     Lable : "बारे में",
                 },
+                Origin :{
+                    Lable : "Origin",
+                },
+                Vision :{
+                    Lable : "Vision",
+                },
                 OurWork :{
                     Lable : "हमारा काम",
                     Title1: "लाभ से शांति और धन से भलाई तक ध्यान केंद्रित करना",
@@ -50,6 +62,12 @@ angular.module('myApp', ["ngSanitize"])
                 },
                 About :{
                 Lable : "Über",
+                },
+                Origin :{
+                    Lable : "Origin",
+                },
+                Vision :{
+                    Lable : "Vision",
                 },
                 OurWork :{
                     Lable : "Unsere Arbeit",
