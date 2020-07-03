@@ -72,26 +72,38 @@
     	<img class="visible-xs visible-sm noPadding" src="./img/title-bg-img-phone.png" width="100%"  alt="Asrkari Satyagraha">
 	</div>
 	<div class="w3-container" style="padding:20px 4px" id="about">
+		<div class="container-fluid" id="Home">
+			<div ng-bind-html="myLanguage.Home.htmlContent"></div>
+		</div>
+		<div class="container-fluid" id="About">
+			<div ng-bind-html="myLanguage.About.htmlContent"></div>
+		</div>
+		<br>
+		<hr>
+		
+		<br>
 		<h3 class="w3-center">ABOUT THE COMPANY</h3>
+		<br>
 		<p class="w3-center w3-large">Key features of our company</p>
+		<br>
 		<div class="w3-center">
 		  <div class="w3-quarter">
-			<img src="https://image.jimcdn.com/app/cms/image/transf/dimension=95x10000:format=gif/path/sa472aa6665cff55c/image/iaa6ab19124baeac2/version/1558557595/image.gif" alt="John" style="width:50%">
+			<img src="https://image.jimcdn.com/app/cms/image/transf/dimension=95x10000:format=gif/path/sa472aa6665cff55c/image/iaa6ab19124baeac2/version/1558557595/image.gif" alt="John" style="width:30%">
 			<p class="w3-large">Environment & Climate Change</p>
 			
 		  </div>
 		  <div class="w3-quarter">
-			<img src="https://image.jimcdn.com/app/cms/image/transf/dimension=95x10000:format=gif/path/sa472aa6665cff55c/image/ic4fadb93cfd5a5dc/version/1558557606/image.gif" alt="John" style="width:50%">
+			<img src="https://image.jimcdn.com/app/cms/image/transf/dimension=95x10000:format=gif/path/sa472aa6665cff55c/image/ic4fadb93cfd5a5dc/version/1558557606/image.gif" alt="John" style="width:30%">
 			<p class="w3-large">Inclusive Economic Growth</p>
 			
 		  </div>
 		  <div class="w3-quarter">
-			<img src="https://image.jimcdn.com/app/cms/image/transf/dimension=95x10000:format=gif/path/sa472aa6665cff55c/image/if04a4a0c721f40eb/version/1558557613/image.gif" alt="John" style="width:50%">
+			<img src="https://image.jimcdn.com/app/cms/image/transf/dimension=95x10000:format=gif/path/sa472aa6665cff55c/image/if04a4a0c721f40eb/version/1558557613/image.gif" alt="John" style="width:30%">
 			<p class="w3-large">Social & Economic Equality</p>
 			
 		  </div>
 		  <div class="w3-quarter">
-			<img src="https://image.jimcdn.com/app/cms/image/transf/dimension=95x10000:format=gif/path/sa472aa6665cff55c/image/ibfde7f45e7eb2f0c/version/1558557618/image.gif" alt="John" style="width:50%">
+			<img src="https://image.jimcdn.com/app/cms/image/transf/dimension=95x10000:format=gif/path/sa472aa6665cff55c/image/ibfde7f45e7eb2f0c/version/1558557618/image.gif" alt="John" style="width:30%">
 			<p class="w3-large">Critical & Rational Thinking</p>
 			
 		  </div>
@@ -154,13 +166,13 @@
 	  <!-- Promo Section - "We know design" -->
 	  <div class="w3-container w3-light-grey" style="padding:20px 4px">
 		<div class="w3-row-padding">
-		  <div class="w3-col m6">
-			<h3>We know design.</h3>
+		  <div class="w3-col m4">
+			<h3>Asrkari Satyagraha Manifesto</h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore.</p>
-			<p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p>
+			<p><a href="#OurWork" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p>
 		  </div>
-		  <div class="w3-col m6">
-			<img class="w3-image w3-round-large" src="https://www.w3schools.com/w3images/phone_buildings.jpg" alt="Buildings" width="700" height="394">
+		  <div class="w3-col m8">
+			<img class="w3-image w3-round-large" src="img/talisman.jpg" alt="Buildings" width="700" height="394">
 		  </div>
 		</div>
 	  </div>
@@ -228,33 +240,15 @@
 		  <p id="caption" class="w3-opacity w3-large"></p>
 		</div>
 	  </div>
-	  
-	  
-	<div class="container-fluid" id="Home">
-		<div ng-bind-html="myLanguage.Home.htmlContent"></div>
-	</div>
-	<div class="container-fluid" id="About">
-		<div ng-bind-html="myLanguage.About.htmlContent"></div>
-	</div>
-	<br>
-	<hr>
+	 
 	<br>
 	<!--div class="col-md-4">
 		<iframe width="100%" src="https://www.youtube.com/embed/Z514MC30cIo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div-->
 	<div class="container-fluid" id="OurWork" style="text-align: center;">
-		<h4>{{myLanguage.OurWork.Title1}}</h4>
-		<br>
-		<div class="container-fluid">
-			<div ng-repeat="myImage in myImages">
-				<div class="col-md-4">
-					<img ng-src="img/work/{{myImage}}" style="width:100%"/>
-				</div>	
-			</div>
-		</div>
 		<br>
 		<p>
-			<h4>{{myLanguage.OurWork.Title2}}</h4>
+			<h5>{{myLanguage.OurWork.Title2}}</h5>
 		</p>
 			<br>
 		<div>
