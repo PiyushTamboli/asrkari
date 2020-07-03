@@ -76,6 +76,6 @@ angular.module('myApp', ["ngSanitize"])
                 $scope.myLanguage.Contact.htmlContent = response.data;
             });
         }
-        $scope.changeLanguage("Deutsche");
+        $scope.changeLanguage("English");
     });
 		    
